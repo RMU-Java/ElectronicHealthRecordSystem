@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 27, 2014 6:07:16 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="EHRAppointment" name="GUI.Patient" table="patient">
+    <id name="patientId" type="java.lang.Integer">
+      <column name="patient_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="name" type="string">
+      <column length="60" name="name" not-null="true"/>
+    </property>
+    <property name="birthday" type="date">
+      <column length="10" name="birthday" not-null="true"/>
+    </property>
+    <property name="sex" type="string">
+      <column length="7" name="sex" not-null="true"/>
+    </property>
+    <property name="address" type="string">
+      <column length="80" name="address" not-null="true"/>
+    </property>
+    <property name="maritalStatus" type="string">
+      <column length="8" name="marital_status" not-null="true"/>
+    </property>
+    <property name="job" type="string">
+      <column length="10" name="job" not-null="true"/>
+    </property>
+    <property name="phone" type="string">
+      <column length="15" name="phone" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 27, 2014 6:07:16 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="EHRAppointment" name="EHRAppointment.GeneralMedicalInfo" table="general_medical_info">
+    <id name="patientId" type="int">
+      <column name="patient_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="mainMedicalProblem" type="string">
+      <column length="70" name="main_medical_problem" not-null="true"/>
+    </property>
+    <property name="medicalProblems" type="string">
+      <column length="65535" name="medical_problems" not-null="true"/>
+    </property>
+    <property name="allergies" type="string">
+      <column length="65535" name="allergies" not-null="true"/>
+    </property>
+    <property name="immunizations" type="string">
+      <column length="65535" name="immunizations" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

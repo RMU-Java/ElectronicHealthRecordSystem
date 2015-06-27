@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 27, 2014 6:07:16 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="freemrs" name="EHRAppointment.Prescription" table="prescription">
+    <id name="prescriptionId" type="java.lang.Integer">
+      <column name="prescription_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="patientId" type="int">
+      <column name="patient_id" not-null="true"/>
+    </property>
+    <property name="dateTime" type="timestamp">
+      <column length="19" name="date_time" not-null="true"/>
+    </property>
+    <property name="notes" type="string">
+      <column length="65535" name="notes" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
