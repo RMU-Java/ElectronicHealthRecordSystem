@@ -12,7 +12,7 @@ import java.util.Date;
 public class Insurance  implements java.io.Serializable {
 
 
-     private Integer insuarenceId;
+     private Integer insuranceID;
      private String provider;
      private String planName;
      private Date effectiveDate;
