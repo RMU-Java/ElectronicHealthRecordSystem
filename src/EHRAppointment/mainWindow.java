@@ -186,7 +186,7 @@ public class mainWindow extends javax.swing.JFrame {
         PatientInfoPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FreeMRS");
+        setTitle("EHRAS");
         setIconImage(new ImageIcon(getClass().getResource("/images/icon_transparent.png")).getImage());
         setMinimumSize(new java.awt.Dimension(1060, 0));
         setResizable(false);
