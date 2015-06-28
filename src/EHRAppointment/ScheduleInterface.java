@@ -69,24 +69,24 @@ public class ScheduleInterface extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         SelectLocations = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        SelectLocationData = new javax.swing.JComboBox();
+        OrEnter = new javax.swing.JLabel();
+        OrEnterData = new javax.swing.JTextField();
+        SelectStartTime = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox();
-        jLabel11 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        SelectStartTimeData = new javax.swing.JComboBox();
+        SelectEndTime = new javax.swing.JLabel();
+        SelectEndTimeData = new javax.swing.JComboBox();
+        IncludeTimeInSearch = new javax.swing.JCheckBox();
+        SearchSchedule = new javax.swing.JButton();
+        SaveSchedule = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        IncludeLocationInSearch = new javax.swing.JCheckBox();
+        AddEntry = new javax.swing.JButton();
+        RemoveEntry = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -122,54 +122,54 @@ public class ScheduleInterface extends javax.swing.JPanel {
         SelectLocations.setText("Select location:");
         add(SelectLocations, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        SelectLocationData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SelectLocationData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                SelectLocationDataActionPerformed(evt);
             }
         });
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 90, -1));
+        add(SelectLocationData, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 90, -1));
 
-        jLabel8.setText("or Enter:");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 90, -1));
+        OrEnter.setText("or Enter:");
+        add(OrEnter, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
+        add(OrEnterData, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 90, -1));
 
-        jLabel9.setText("Select start time:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
+        SelectStartTime.setText("Select start time:");
+        add(SelectStartTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
 
         jLabel10.setText("Select date:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, -1));
+        SelectStartTimeData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        add(SelectStartTimeData, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, -1, -1));
 
-        jLabel11.setText("Select end time:");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, -1));
+        SelectEndTime.setText("Select end time:");
+        add(SelectEndTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, -1, -1));
+        SelectEndTimeData.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        add(SelectEndTimeData, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, -1, -1));
 
-        jCheckBox1.setText("Include time in seach");
-        add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, -1, -1));
+        IncludeTimeInSearch.setText("Include time in seach");
+        add(IncludeTimeInSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(153, 255, 153));
-        jButton1.setText("Search schedule");
-        jButton1.setToolTipText("Search saved schedules");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SearchSchedule.setBackground(new java.awt.Color(153, 255, 153));
+        SearchSchedule.setText("Search schedule");
+        SearchSchedule.setToolTipText("Search saved schedules");
+        SearchSchedule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SearchScheduleActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 100, -1, -1));
+        add(SearchSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 100, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(153, 255, 153));
-        jButton2.setText("Save schedule");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        SaveSchedule.setBackground(new java.awt.Color(153, 255, 153));
+        SaveSchedule.setText("Save schedule");
+        SaveSchedule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SaveScheduleActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, 120, -1));
+        add(SaveSchedule, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, 120, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel12.setText("Total number of patients scheduled:");
@@ -213,43 +213,43 @@ public class ScheduleInterface extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 680, 160));
 
-        jCheckBox2.setText("Include location in search");
-        add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, -1));
+        IncludeLocationInSearch.setText("Include location in search");
+        add(IncludeLocationInSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(153, 255, 153));
-        jButton3.setText("Add entry");
-        jButton3.setToolTipText("Add schedule to table");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        AddEntry.setBackground(new java.awt.Color(153, 255, 153));
+        AddEntry.setText("Add entry");
+        AddEntry.setToolTipText("Add schedule to table");
+        AddEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                AddEntryActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, 100, -1));
+        add(AddEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 210, 100, -1));
 
-        jButton4.setBackground(new java.awt.Color(255, 204, 204));
-        jButton4.setText("Remove entry");
-        jButton4.setToolTipText("Remove entry froom table");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        RemoveEntry.setBackground(new java.awt.Color(255, 204, 204));
+        RemoveEntry.setText("Remove entry");
+        RemoveEntry.setToolTipText("Remove entry froom table");
+        RemoveEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                RemoveEntryActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, -1, -1));
+        add(RemoveEntry, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 240, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/scheduleEdt.jpg"))); // NOI18N
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 110));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void SelectLocationDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectLocationDataActionPerformed
         //Set location of the text area equal to selected location from combo box
-        String sch = (String) jComboBox1.getSelectedItem();
+        String sch = (String) SelectLocationData.getSelectedItem();
         if (sch != null) {
-            this.jTextField1.setText(sch);
+            this.OrEnterData.setText(sch);
         }
 
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_SelectLocationDataActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void SaveScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveScheduleActionPerformed
         //Add schedule to database
         Schedule sch = new Schedule();
         try {
@@ -258,9 +258,9 @@ public class ScheduleInterface extends javax.swing.JPanel {
             sqlDate = new java.sql.Date(invoiceDate.getTime());
 
             sch.setDate(sqlDate);
-            sch.setLocation(jTextField1.getText());
-            int start = Integer.parseInt(jComboBox2.getSelectedItem().toString());      //get start and end time slots
-            int end = Integer.parseInt(jComboBox3.getSelectedItem().toString());
+            sch.setLocation(OrEnterData.getText());
+            int start = Integer.parseInt(SelectStartTimeData.getSelectedItem().toString());      //get start and end time slots
+            int end = Integer.parseInt(SelectEndTimeData.getSelectedItem().toString());
             sch.setStartTime(start);                //Set start and end time to schedule object
             sch.setEndTime(end);
             sch.setPatientId(patient.getPatientId());
@@ -275,7 +275,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
                 Query qr = session.createQuery("from Schedule where ((startTime<= :code1 and :code1 <=endTime) or (startTime<= :code2 and :code2 <=endTime)) and (location!=:code3) and (date= :code4)");
                 qr.setParameter("code1", start);
                 qr.setParameter("code2", end);
-                qr.setParameter("code3", jTextField1.getText());
+                qr.setParameter("code3", OrEnterData.getText());
                 qr.setParameter("code4", sqlDate);
                 List<Schedule> result = qr.list();
                 session.getTransaction().commit();
@@ -301,17 +301,17 @@ public class ScheduleInterface extends javax.swing.JPanel {
         }
 
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_SaveScheduleActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void AddEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddEntryActionPerformed
         //Add schedule to table
         try {
             java.sql.Date sqlDate = null;
             java.util.Date invoiceDate = formatDate.parse(picker.getEditor().getText()); //geting date from 
             sqlDate = new java.sql.Date(invoiceDate.getTime());
 
-            int start = Integer.parseInt(jComboBox2.getSelectedItem().toString());  //get start and end time
-            int end = Integer.parseInt(jComboBox3.getSelectedItem().toString());
+            int start = Integer.parseInt(SelectStartTimeData.getSelectedItem().toString());  //get start and end time
+            int end = Integer.parseInt(SelectEndTimeData.getSelectedItem().toString());
 
             java.util.Date date = new java.util.Date();
             if (date.after(sqlDate)) {                      //Checking date is after
@@ -325,7 +325,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
                 }
 
                 jTable1.setValueAt(patient.getName(), ++tablePosition, 0);
-                jTable1.setValueAt(jTextField1.getText(), tablePosition, 1);
+                jTable1.setValueAt(OrEnterData.getText(), tablePosition, 1);
                 jTable1.setValueAt(picker.getEditor().getText(), tablePosition, 2);
                 jTable1.setValueAt(start + ".00", tablePosition, 3);
                 jTable1.setValueAt(end + ".00", tablePosition, 4);
@@ -340,9 +340,9 @@ public class ScheduleInterface extends javax.swing.JPanel {
         }
 
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_AddEntryActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void RemoveEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveEntryActionPerformed
         //Removing item from table
         int selectedRow = this.jTable1.getSelectedRow();
         try {
@@ -374,13 +374,13 @@ public class ScheduleInterface extends javax.swing.JPanel {
         }
 
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_RemoveEntryActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SearchScheduleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchScheduleActionPerformed
         //Searching schedules
         try {
-            boolean location = jCheckBox2.isSelected(); //Checking for location and time search
-            boolean time = jCheckBox1.isSelected();
+            boolean location = IncludeLocationInSearch.isSelected(); //Checking for location and time search
+            boolean time = IncludeTimeInSearch.isSelected();
 
             java.sql.Date sqlDate = null;
             java.util.Date invoiceDate = formatDate.parse(picker.getEditor().getText()); //get selected date
@@ -391,9 +391,9 @@ public class ScheduleInterface extends javax.swing.JPanel {
             if (location && time) {  //Compare with check boxes and do required action
                 Query qr = session.createQuery("from Schedule where date=:code1 and startTime=:code2 and endTime=:code3 and location=:code4");
                 qr.setParameter("code1", sqlDate);
-                qr.setParameter("code4", jTextField1.getText());
-                qr.setParameter("code2", Integer.parseInt(jComboBox2.getSelectedItem().toString()));
-                qr.setParameter("code3", Integer.parseInt(jComboBox3.getSelectedItem().toString()));
+                qr.setParameter("code4", OrEnterData.getText());
+                qr.setParameter("code2", Integer.parseInt(SelectStartTimeData.getSelectedItem().toString()));
+                qr.setParameter("code3", Integer.parseInt(SelectEndTimeData.getSelectedItem().toString()));
                 List<Schedule> result = qr.list();
                 session.getTransaction().commit();
                 addToTable(result);
@@ -402,7 +402,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
             } else if (location && !time) {
                 Query qr = session.createQuery("from Schedule where date=:code1 and location=:code4");
                 qr.setParameter("code1", sqlDate);
-                qr.setParameter("code4", jTextField1.getText());
+                qr.setParameter("code4", OrEnterData.getText());
                 List<Schedule> result = qr.list();
                 session.getTransaction().commit();
                 addToTable(result);
@@ -411,8 +411,8 @@ public class ScheduleInterface extends javax.swing.JPanel {
             } else if (!location && time) {
                 Query qr = session.createQuery("from Schedule where date=:code1 and startTime=:code2 and endTime=:code3");
                 qr.setParameter("code1", sqlDate);
-                qr.setParameter("code2", Integer.parseInt(jComboBox2.getSelectedItem().toString()));
-                qr.setParameter("code3", Integer.parseInt(jComboBox3.getSelectedItem().toString()));
+                qr.setParameter("code2", Integer.parseInt(SelectStartTimeData.getSelectedItem().toString()));
+                qr.setParameter("code3", Integer.parseInt(SelectEndTimeData.getSelectedItem().toString()));
                 List<Schedule> result = qr.list();
                 session.getTransaction().commit();
                 addToTable(result);
@@ -433,7 +433,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
         }
 
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SearchScheduleActionPerformed
 
     private void addToTable(List<Schedule> list) {  // Used to add search results to jtable
         DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
@@ -459,19 +459,22 @@ public class ScheduleInterface extends javax.swing.JPanel {
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddEntry;
+    private javax.swing.JCheckBox IncludeLocationInSearch;
+    private javax.swing.JCheckBox IncludeTimeInSearch;
+    private javax.swing.JLabel OrEnter;
+    private javax.swing.JTextField OrEnterData;
+    private javax.swing.JButton RemoveEntry;
+    private javax.swing.JButton SaveSchedule;
+    private javax.swing.JButton SearchSchedule;
+    private javax.swing.JLabel SelectEndTime;
+    private javax.swing.JComboBox SelectEndTimeData;
+    private javax.swing.JComboBox SelectLocationData;
     private javax.swing.JLabel SelectLocations;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
+    private javax.swing.JLabel SelectStartTime;
+    private javax.swing.JComboBox SelectStartTimeData;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -480,12 +483,9 @@ public class ScheduleInterface extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     void updateInfo(Patient currentPatient) {       //Update all sub types of interfaces
@@ -518,7 +518,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
     }
 
     private void updateComobo() {   //Add locations to the combo box
-        jComboBox1.removeAllItems();
+        SelectLocationData.removeAllItems();
 
         session.beginTransaction();
         Query qr = session.createQuery("from Schedule group by location");
@@ -527,7 +527,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
 
         if (!result.isEmpty()) {
             for (Schedule sch : result) {
-                jComboBox1.addItem(sch.getLocation());
+                SelectLocationData.addItem(sch.getLocation());
             }
         }
 
