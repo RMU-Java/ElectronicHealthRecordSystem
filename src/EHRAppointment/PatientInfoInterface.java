@@ -49,14 +49,14 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         this.WeightData.setText(age+"");
         this.jLabel1.setText(patient.getName());
         
-        this.jLabel28.setText(patient.getBirthday().toString());
-        this.jLabel30.setText(patient.getSex());
+        this.Birthday.setText(patient.getBirthday().toString());
+        this.Sex.setText(patient.getSex());
         this.jLabel32.setText(patient.getMaritalStatus());
         this.jLabel34.setText(patient.getJob());
         this.jLabel37.setText(patient.getPhone());
     }
 
-    public void updateInsuarence() {        //It is required to update in insuarence interface when values are changed
+    public void updateInsurance() {        //It is required to update in insuarence interface when values are changed
 
         session.beginTransaction();
         Query qr = session.createQuery("from Insurance where patientId =:code");
@@ -105,25 +105,25 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         if(!result.isEmpty()){  //Check there are previous vitals are available
             Vitals vitals = result.get(0);
             
-            MostRecentVisitVitalsData.setText(vitals.getDateTime().toString());
-            jLabel5.setText(vitals.getBpSystolic()+"");
-            BloodPressureSystolicData.setText(vitals.getBpDiastolic()+"");
-            TemperatureC.setText(vitals.getTemperature()+"");
-            BMIData.setText(vitals.getBmi()+"");
-            Pulse.setText(vitals.getWeight()+"");
-            PulseDatas.setText(vitals.getOxygenSaturation()+"");
-            jLabel19.setText(vitals.getPulse()+"");
-            jLabel21.setText(vitals.getHeight()+"");
+            MostRecentVisitVitalsData.setText(vitals.getDateTime().toString()+"value");
+            BloodPressureSystolicData.setText(vitals.getBpSystolic()+"value");
+            BloodPressureDiastolicData.setText(vitals.getBpDiastolic()+"value");
+            TemperatureC.setText(vitals.getTemperature()+"value");
+            BMIData.setText(vitals.getBmi()+"value");
+            Weight.setText(vitals.getWeight()+"value");
+            PulseDatas.setText(vitals.getOxygenSaturation()+"value");
+            Pulse.setText(vitals.getPulse()+"value");
+            Height.setText(vitals.getHeight()+"");
         }else{
             MostRecentVisitVitalsData.setText("value");
-            jLabel5.setText("value");
+            BloodPressureSystolicData.setText("value");
             BloodPressureSystolicData.setText("value");
             TemperatureC.setText("value");
             BMIData.setText("value");
             Pulse.setText("value");
             PulseDatas.setText("value");
-            jLabel19.setText("value");
-            jLabel21.setText("value");
+            Pulse.setText("value");
+            Height.setText("value");
         }
         
     }
@@ -186,6 +186,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         OxygenSaturationData = new javax.swing.JLabel();
         PulseData = new javax.swing.JLabel();
         HeightData = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -309,6 +310,8 @@ public class PatientInfoInterface extends javax.swing.JPanel {
 
         HeightData.setText("jLabel3");
 
+        jLabel2.setText("Birthday");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -325,7 +328,9 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                             .addComponent(jLabel31)
                             .addComponent(jLabel33))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
                         .addGap(103, 103, 103)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -488,7 +493,8 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                             .addComponent(jLabel36)
                             .addComponent(jLabel39)
                             .addComponent(jLabel40)
-                            .addComponent(jLabel42))
+                            .addComponent(jLabel42)
+                            .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel29)
@@ -537,6 +543,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
