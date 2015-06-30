@@ -32,7 +32,7 @@ import org.hibernate.Session;
  *
  * @author Austin, Olena, Daniel
  */
-public class mainWindow extends javax.swing.JFrame {
+public final class mainWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form mainWindow
