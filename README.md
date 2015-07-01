@@ -14,8 +14,7 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 *  _This project will use files to maintain the system and patient information._
 
 <<<<<<< HEAD
-##Arrays
-=======
+
 Using a MySQL Database for Data Input and Output
 
 ```XML
@@ -34,7 +33,7 @@ Using a MySQL Database for Data Input and Output
 ```
 
 ##Arrays
->>>>>>> origin/master
+
 
 ##Loops
 
