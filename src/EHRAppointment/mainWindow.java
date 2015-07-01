@@ -34,9 +34,6 @@ import org.hibernate.Session;
  */
 public final class mainWindow extends javax.swing.JFrame {
 
-    /**
-     * Creates new form mainWindow
-     */
     Session session;
     
     WelcomeInterface welcome;

@@ -212,42 +212,34 @@ public static boolean compareQuestion(Userinfo user,String answer) throws Except
 ```
 ### Schedule
 * Schedule.java
+> Schedule to map database
+> public class Schedule  implements java.io.Serializable
 
->
->
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
-|               |                |         |
-|               |                |         |
-|               |                |         | 
+|public class Schedule|private Integer scheduleId;|import java.util.Date;|   
+|               |private int patientId;|         |
+|               |private Date date;|         |
+|               |private int startTime;|         |
+|               |private int endTime;|         | 
+|               |private String location;|         | 
 
-Loops
-
-Arrays
-
-Exceptions
 * Schedule.hbm.xml
 
 ### Insurance
 * Insurance.java
+>  Insurance to map database
+>  public class Insurance  implements java.io.Serializable
 
->
->
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
-|               |                |         |
-|               |                |         |
-|               |                |         | 
+|public class Insurance|private Integer insuranceID;|import java.util.Date;|   
+|               |private String provider;|         |
+|               |private String planName;|         |
+|               |private Date effectiveDate;|         |
+|               |private String policyNumber;|         | 
+|               |private int patientId;|         | 
 
-Loops
-
-Arrays
-
-Exceptions
 ### Vitals
 * Vitals.java
 
@@ -291,24 +283,40 @@ Exceptions
 
 ### Chart Panel Draw
 * ChartPanelDraw.java
-```Java
+
+>
+>
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|       |     |     |
-|       |     |     |
-|       |     |     | 
-```
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 ### General Medical Info
 * GeneralMedicalInfo.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * GeneralMedicalInfo.hbm.xml 
 
 
@@ -316,210 +324,342 @@ Exceptions
 
 ### WelcomeInterface
 * WelcomeInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * WelcomeInterface.form
 
 ### Main Window
 * mainWindow.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|public final class mainWindow|private login log;|import EHRAppointment.WelcomeInterface;|   
+|               |private Userinfo user;|import EHRAppointment.DemographicInterface;|
+|               |private MoreInterface moreInterface;|import EHRAppointment.MoreInterface;|
+|               |                |import EHRAppointment.Patient|
+|               |                |import EHRAppointment.PatientInfoInterface;| 
+|               |                |import EHRAppointment.PrescriptionInterface;|   
+|               |                |import EHRAppointment.ScheduleInterface;|
+|               |                |import EHRAppointment.SelectPatientInterface;|
+|               |                |import EHRAppointment.Userinfo;|
+|               |                |import EHRAppointment.VitalsInterface;| 
+|               |                |import EHRAppointment.login;|   
+|               |                |import java.awt.Color;|
+|               |                |import java.awt.Dimension;|
+|               |                |import java.awt.Frame;|
+|               |                |import java.util.List;| 
+|               |                |import javax.swing.ImageIcon;|   
+|               |                |import javax.swing.JLabel;|
+|               |                |import javax.swing.JOptionPane;|
+|               |                |import javax.swing.JPanel;|
+|               |                |import javax.swing.UIManager;| 
+|               |                |import javax.swing.plaf.ColorUIResource;|   
+|               |                |import org.hibernate.Query;|
+|               |                |import org.hibernate.Session;|
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * mainWindow.form
 
 ### Patient Info InterFace
 * PatientInfoInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * PatientInfoInterFace.form
 
 ### General Medical Interface
 * GeneralMedicalInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * GeneralMedicalInterface.form
 
 ### Demographics InterFace
 * DemographicInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * DemographicInterface.form
 
 ### Insurance Interface
 * InsuranceInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * InsuranceInterface.form
 
 ### Main Window
 * mainWindow.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * mainWindow.form
 
 ### Login
 * Login.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * Login.form
 
 ### More Interface
 * MoreInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * MoreInterface.form
 
 ### Password Reset Interface
 * PasswordResetInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * PasswordResetInterface.form
 
 ### Prescription Interface
 * PrescriptionInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * PrescriptionInterface.form
 
 ### Previous Vitals Interface
 * PreviousVitalsInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * PreviousVitalsInterface.form
 
 ### Schedule Interface
 * ScheduleInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * ScheduleInterface.form
 
 ### Search Window
 * SearchWindow.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * SearchWindow.form
 
 ### Select PatientInterface
 * SelectPatientInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * SelectPatientInterface.form
 
 ### Vitals Interface
 * VitalsInterface.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions 
 * VitalsInterface.form
 
 
