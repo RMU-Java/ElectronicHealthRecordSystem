@@ -9,6 +9,11 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 ###Files
 *  _This project will use files to maintain the system and patient information._
 
+Using a MySQL Database for Data Input and Output
+
+
+
+
 ###Arrays
 
 ###Loops
