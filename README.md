@@ -16,6 +16,9 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 ###GUI
 *  _Java GUI capabilities will be used to display windows to for input, modify patient information and display results of queries for retrieval of information._
 
+Main Window - Draft 1
+![] (https://raw.githubusercontent.com/RMU-Java/ElectronicHealthRecordSystem/master/EHRAS/2015_07_01_10_47_44_EHRAS.png)
+
 ###Objects and Classes
 *  _Functions performed by the medical information system_
 
