@@ -1,8 +1,8 @@
 # ElectronicHealthRecordSystem
 ## Team Members
-* Austin
-* Olena
-* Daniel
+* Austin @austinvernsonger
+* Olena @elenkapush
+* Daniel @delreal2
 
 ###MIS 525:  Object Oriented Programming   Final Project
 
