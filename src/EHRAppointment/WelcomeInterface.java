@@ -57,7 +57,7 @@ public class WelcomeInterface extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Aparajita", 2, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("and Appointmetn System");
+        jLabel3.setText("and Appointment System");
 
         jSeparator2.setBackground(new java.awt.Color(204, 204, 255));
 
