@@ -29,11 +29,122 @@ Using a MySQL Database for Data Input and Output
 </persistence>
 ```
 
-
-###Arrays
+##Arrays
 >>>>>>> origin/master
 
 ##Loops
+
+
+##Objects and Classes
+_Functions performed by the medical information system_
+
+### Patient
+* Patient.java
+* Patient.hbm.xml
+
+### Hibernate Utility 
+* NewHibernateUtil.java
+* 
+### Patient Info Export
+* PatientInfoExport.java
+
+### User Info
+* Userinfo.java
+* Userinfo.hbm.xml
+
+
+### User Password Match
+* UserPasswordMatch.java
+
+### Schedule
+* Schedule.java
+* Schedule.hbm.xml
+
+### Insurance
+* Insurance.java
+
+### Vitals
+* Vitals.java
+* Vitals.hbm.xml
+
+### Prescription
+* Prescription.java
+* Prescription.hbm.xml
+
+### Chart Panel Draw
+* ChartPanelDraw.java
+
+### General Medical Info
+* GeneralMedicalInfo.java
+* GeneralMedicalInfo.hbm.xml 
+
+
+## GUI InterFaces (Objects and Classes)
+
+### WelcomeInterface
+* WelcomeInterface.java
+* WelcomeInterface.form
+
+### Main Window
+* mainWindow.java
+* mainWindow.form
+
+### Patient Info InterFace
+* PatientInfoInterface.java
+* PatientInfoInterFace.form
+
+### General Medical Interface
+* GeneralMedicalInterface.java
+* GeneralMedicalInterface.form
+
+### Demographics InterFace
+* DemographicInterface.java
+* DemographicInterface.form
+
+### Insurance Interface
+* InsuranceInterface.java
+* InsuranceInterface.form
+
+### Main Window
+* mainWindow.java
+* mainWindow.form
+
+### Login
+* Login.java
+* Login.form
+
+### More Interface
+* MoreInterface.java
+* MoreInterface.form
+
+### Password Reset Interface
+* PasswordResetInterface.java
+* PasswordResetInterface.form
+
+### Prescription Interface
+* PrescriptionInterface.java
+* PrescriptionInterface.form
+
+### Previous Vitals Interface
+* PreviousVitalsInterface.java
+* PreviousVitalsInterface.form
+
+### Schedule Interface
+* ScheduleInterface.java
+* ScheduleInterface.form
+
+### Search Window
+* SearchWindow.java
+* SearchWindow.form
+
+### Select PatientInterface
+* SelectPatientInterface.java
+* SelectPatientInterface.form
+
+### Vitals Interface
+* VitalsInterface.java
+* VitalsInterface.form
+
 
 ##GUI
 *  _Java GUI capabilities will be used to display windows to for input, modify patient information and display results of queries for retrieval of information._
@@ -87,10 +198,6 @@ Using a MySQL Database for Data Input and Output
 ![] (https://raw.githubusercontent.com/RMU-Java/ElectronicHealthRecordSystem/master/EHRAS/InsuranceInterFace -  Draft 1.png)
 
 
-
-
-###Objects and Classes
-*  _Functions performed by the medical information system_
 
 
 ###Grading
