@@ -9,7 +9,29 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 ##Files
 *  _This project will use files to maintain the system and patient information._
 
+<<<<<<< HEAD
 ##Arrays
+=======
+Using a MySQL Database for Data Input and Output
+
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="EHR-AppointmentPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://ehrappointment.c2q69yirrq2s.us-west-2.rds.amazonaws.com:3306/EHRAppointment?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="######!"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="EHRAppointment"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+```
+
+
+###Arrays
+>>>>>>> origin/master
 
 ##Loops
 
