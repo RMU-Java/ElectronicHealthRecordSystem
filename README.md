@@ -1,4 +1,8 @@
 # ElectronicHealthRecordSystem
+## Team Members
+* Austin
+* Olena
+* Daniel
 
 ###MIS 525:  Object Oriented Programming   Final Project
 
