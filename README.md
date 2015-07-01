@@ -13,7 +13,7 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 ##Files
 *  _This project will use files to maintain the system and patient information._
 
-<<<<<<< HEAD
+
 
 Using a MySQL Database for Data Input and Output
 
@@ -31,13 +31,6 @@ Using a MySQL Database for Data Input and Output
   </persistence-unit>
 </persistence>
 ```
-
-##Arrays
-
-
-##Loops
-
-
 ##Objects and Classes
 
 ### Patient 
