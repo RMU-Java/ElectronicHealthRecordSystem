@@ -91,71 +91,130 @@ Using a MySQL Database for Data Input and Output
 
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
+|public class NewHibernateUtil|private static final SessionFactory sessionFactory|import org.hibernate.cfg.AnnotationConfiguration;|   
+|               |                |import org.hibernate.SessionFactory|
 |               |                |         |
 |               |                |         |
 |               |                |         | 
 
-2. Loops
-
-3. Arrays
-
-4. Exceptions
-
+2. Exceptions
+```Java
+static {
+        try {
+            // Create the SessionFactory from standard (hibernate.cfg.xml) 
+            // config file.
+            sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
+        } catch (Throwable ex) {
+            // Log the exception. 
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+```
 ### Patient Info Export
-1. PatientInfoExport.java
+* PatientInfoExport.java
+
+> implements java.io.Serializable  
+> use to serialize data of a patient and transfer
 
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
-|               |                |         |
-|               |                |         |
-|               |                |         | 
+|public class PatientInfoExport|private Patient patient |import java.util.|   
+||private Insurance insuarenceInfo||
+||private GeneralMedicalInfo generalMedicalInfo||
+||private List (Prescription) pres||
+||private List (Vitals) vitals|| 
 
-2. Loops
+Loops
 
-3. Arrays
+Arrays
 
-4. Exceptions
-### User Info
-1. Userinfo.java
+Exceptions
+
+
+###  User Info
+* Userinfo.java
 
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
-|               |                |         |
-|               |                |         |
-|               |                |         | 
+|public class Userinfo|private String username;|         |   
+|               |private String type;|         |
+|               |private String passwordhash;|         |
+|               |private String question;|         |
+|               |private String answer;|         | 
 
-2. Loops
-
-3. Arrays
-
-4. Exceptions
+Strings:
+```Java
+    public Userinfo(String username, String type, String passwordhash, String question, String answer) {
+       this.username = username;
+       this.type = type;
+       this.passwordhash = passwordhash;
+       this.question = question;
+       this.answer = answer;
+    }
+```
 * Userinfo.hbm.xml
 
 ### User Password Match
 1. UserPasswordMatch.java
 
+>
+>
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
-|               |                |         |   
-|               |                |         |
+|public class UserPasswordMatch||import java.security.MessageDigest;|   
+|               |                |import java.util.Arrays;|
 |               |                |         |
 |               |                |         |
 |               |                |         | 
 
-2. Loops
-
-3. Arrays
-
-4. Exceptions
+public static String getHash(Arrays/Exceptions) 
+```Java
+public static String getHash(String password) throws Exception {
+        MessageDigest sha256=MessageDigest.getInstance("SHA-256");
+        byte[] passBytes=password.getBytes();
+        byte[] passHash=sha256.digest(passBytes);
+        String hash=Arrays.toString(passHash);
+        return hash;
+}
+```
+public static boolean compareData (1st Arrays/Exceptions)
+```Java
+public static boolean compareData(Userinfo user,String password) throws Exception// returns true if username and password is a match
+    {
+        if(user.getPasswordhash().equals(getHash(password)))
+            return true;
+        else
+            return false;
+    }
+```
+public static boolean changePassword (2nd Arrays/Exceptions)
+```Java
+public static boolean changePassword(Userinfo user,String curPassword,String newPassword) throws Exception
+    {
+        if(compareData(user,curPassword))
+        {
+            user.setPasswordhash(getHash(newPassword));
+            return true;
+        }
+        else
+            return false;
+    }
+```
+public static boolean compareQuestion (3rd Arrays/Exceptions)
+```Java
+public static boolean compareQuestion(Userinfo user,String answer) throws Exception// returns true if username and password is a match
+    {
+        if(user.getAnswer().equals(getHash(answer)))
+            return true;
+        else
+            return false;
+    }
+```
 ### Schedule
 * Schedule.java
 
+>
+>
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
 |               |                |         |   
@@ -164,16 +223,18 @@ Using a MySQL Database for Data Input and Output
 |               |                |         |
 |               |                |         | 
 
-2. Loops
+Loops
 
-3. Arrays
+Arrays
 
-4. Exceptions
+Exceptions
 * Schedule.hbm.xml
 
 ### Insurance
 * Insurance.java
 
+>
+>
 |  Public Class | Private Classes| Imports |
 | ------------- |:--------------:| -------:|
 |               |                |         |   
@@ -182,35 +243,50 @@ Using a MySQL Database for Data Input and Output
 |               |                |         |
 |               |                |         | 
 
-2. Loops
+Loops
 
-3. Arrays
+Arrays
 
-4. Exceptions
+Exceptions
 ### Vitals
 * Vitals.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions          
+
 * Vitals.hbm.xml
 
 ### Prescription
 * Prescription.java
-```Java
-|  Public Class | Private Classes| Imports | Exceptions | Arrays  |  Loops |
-| ------------- |:--------------:| -------:| ----------:|--------:| ------:|
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |
-|               |                |         |            |         |        |  
-```
+
+>
+>
+|  Public Class | Private Classes| Imports |
+| ------------- |:--------------:| -------:|
+|               |                |         |   
+|               |                |         |
+|               |                |         |
+|               |                |         |
+|               |                |         | 
+
+Loops
+
+Arrays
+
+Exceptions
 * Prescription.hbm.xml
 
 ### Chart Panel Draw
