@@ -4,6 +4,11 @@
 * Olena @elenkapush
 * Daniel @delreal2
 
+### Javadoc
+> The Following Link Will show you the documentation of the objects, classes, and etc.
+![] (http://rmu-java.github.io/ElectronicHealthRecordSystem/)
+![Javadoc] (http://rmu-java.github.io/ElectronicHealthRecordSystem/)
+
 ###MIS 525:  Object Oriented Programming   Final Project
 
 _The goal of the project is to deploy the different object oriented concepts studied in class to build one integrated application that simulates a real world problem. The project will be implemented using the Java programming language._
