@@ -39,8 +39,8 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             jButton1.setVisible(false);
             jButton2.setVisible(false);
             jButton3.setVisible(false);
-            jTextArea1.setEditable(false);
-            jTextArea2.setEditable(false);
+            AllergiesData.setEditable(false);
+            PrescriptionData.setEditable(false);
         }
             
     }
@@ -64,11 +64,11 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             medical = result.get(0);
 
             jLabel11.setText(medical.getMainMedicalProblem());
-            jTextArea1.setText(medical.getAllergies());
+            AllergiesData.setText(medical.getAllergies());
 
         } else {
             jLabel11.setText("not found");
-            jTextArea1.setText("");
+            AllergiesData.setText("");
         }
     }
 
@@ -112,45 +112,47 @@ public class PrescriptionInterface extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Age = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        MedicalIssue = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        SelectDate = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel9 = new javax.swing.JLabel();
+        AllergiesData = new javax.swing.JTextArea();
+        Prescription = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        PrescriptionData = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jButton4 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
+        SearchDrugOnline = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        AgeData = new javax.swing.JLabel();
+        MedicalIssueData = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("Prescriptions");
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Age:");
+        Age.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Age.setText("Age:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel5.setText("Medical issue:");
+        MedicalIssue.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        MedicalIssue.setText("Medical issue:");
 
         jLabel6.setText(" ");
 
-        jLabel7.setText("Select date:");
+        SelectDate.setText("Select date:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -161,16 +163,18 @@ public class PrescriptionInterface extends javax.swing.JPanel {
 
         jLabel8.setText("Allergies:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        AllergiesData.setBackground(new java.awt.Color(204, 204, 204));
+        AllergiesData.setColumns(20);
+        AllergiesData.setRows(5);
+        jScrollPane1.setViewportView(AllergiesData);
 
-        jLabel9.setText("Prescription:");
+        Prescription.setText("Prescription:");
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        PrescriptionData.setEditable(false);
+        PrescriptionData.setBackground(new java.awt.Color(204, 204, 204));
+        PrescriptionData.setColumns(20);
+        PrescriptionData.setRows(5);
+        jScrollPane2.setViewportView(PrescriptionData);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setText("Add new prescription");
@@ -196,7 +200,7 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setText("Search");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,9 +208,18 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             }
         });
 
-        jLabel10.setText("Search drug online:");
+        SearchDrugOnline.setBackground(new java.awt.Color(0, 0, 0));
+        SearchDrugOnline.setText("Search drug online:");
 
+        jTextField2.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Prescription icon.jpg"))); // NOI18N
+        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        AgeData.setText("jLabel3");
+
+        MedicalIssueData.setText("jLabel3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -219,19 +232,21 @@ public class PrescriptionInterface extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
+                            .addComponent(Prescription)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(40, 40, 40)
                                 .addComponent(jLabel2)
                                 .addGap(73, 73, 73)
-                                .addComponent(jLabel3)
+                                .addComponent(Age)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4))
+                                .addComponent(jLabel4)
+                                .addGap(12, 12, 12)
+                                .addComponent(AgeData))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
+                        .addComponent(SearchDrugOnline)
                         .addGap(18, 18, 18)
                         .addComponent(jTextField2)
                         .addGap(18, 18, 18)
@@ -239,9 +254,13 @@ public class PrescriptionInterface extends javax.swing.JPanel {
                         .addGap(71, 71, 71)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(MedicalIssue)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(MedicalIssueData)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel6)
                         .addGap(92, 92, 92))
@@ -251,7 +270,7 @@ public class PrescriptionInterface extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
+                                        .addComponent(SelectDate)
                                         .addGap(18, 18, 18)
                                         .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -271,25 +290,27 @@ public class PrescriptionInterface extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3)
+                    .addComponent(Age)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel5)
+                    .addComponent(MedicalIssue)
                     .addComponent(jLabel6)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgeData)
+                    .addComponent(MedicalIssueData))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
+                            .addComponent(SelectDate)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton4)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
+                            .addComponent(SearchDrugOnline)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -310,7 +331,7 @@ public class PrescriptionInterface extends javax.swing.JPanel {
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel9)))
+                        .addComponent(Prescription)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -319,9 +340,9 @@ public class PrescriptionInterface extends javax.swing.JPanel {
         //Showing prescription according to selection
         Prescription pres = (Prescription) jComboBox1.getSelectedItem();
         if (pres != null) {
-            jTextArea2.setText(pres.getNotes());
+            PrescriptionData.setText(pres.getNotes());
         }else{
-            jTextArea2.setText("");
+            PrescriptionData.setText("");
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -349,8 +370,8 @@ public class PrescriptionInterface extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Adding new prescription 
-        jTextArea2.setText("");
-        jTextArea2.setEditable(true);
+        PrescriptionData.setText("");
+        PrescriptionData.setEditable(true);
         jButton2.setEnabled(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -358,9 +379,9 @@ public class PrescriptionInterface extends javax.swing.JPanel {
         //Saving the prescription
         Prescription current = new Prescription();
 
-        if (!jTextArea2.equals("")) { //Check prescriptions are empty 
+        if (!PrescriptionData.equals("")) { //Check prescriptions are empty 
             java.util.Date date = new java.util.Date();
-            current.setNotes(jTextArea2.getText());
+            current.setNotes(PrescriptionData.getText());
             current.setDateTime(date);
             current.setPatientId(patient.getPatientId());
 
@@ -378,7 +399,7 @@ public class PrescriptionInterface extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Saving allergies
-        medical.setAllergies(jTextArea1.getText());
+        medical.setAllergies(AllergiesData.getText());
         session.beginTransaction();
         session.update(medical);
         session.getTransaction().commit();
@@ -388,28 +409,30 @@ public class PrescriptionInterface extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Age;
+    private javax.swing.JLabel AgeData;
+    private javax.swing.JTextArea AllergiesData;
+    private javax.swing.JLabel MedicalIssue;
+    private javax.swing.JLabel MedicalIssueData;
+    private javax.swing.JLabel Prescription;
+    private javax.swing.JTextArea PrescriptionData;
+    private javax.swing.JLabel SearchDrugOnline;
+    private javax.swing.JLabel SelectDate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
