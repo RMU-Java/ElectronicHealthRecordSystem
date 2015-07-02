@@ -1,38 +1,39 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
-
+/**
+     * Creates new form VitalsInterface
+     */
 import EHRAppointment.ChartPanelDraw;
 import EHRAppointment.Patient;
 import EHRAppointment.Userinfo;
+import java.awt.HeadlessException;
 import java.util.Calendar;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import java.util.Date;
-import javax.swing.JFrame;
-import org.jfree.ui.RefineryUtilities;
 
 /**
  *
- * @author Austin, Olena, Daniel
+ * @author songer
  */
 public class VitalsInterface extends javax.swing.JPanel {
-
-    /**
-     * Creates new form VitalsInterface
-     */
+    private static final long serialVersionUID = -113516247155474667L;
+/**
+ * @author Austin, Olena, Daniel
+ */
     Session session;
     Patient patient;
     List<Vitals> result;        //To store vital information
     GeneralMedicalInfo medical; //To store medical information
     PreviousVitalsInterface previous; //To show previous vitals
     boolean newPatient = false;
-    private Userinfo user;
+    private final Userinfo user;
 
+    /**
+     *
+     * @param session
+     * @param user
+     */
     public VitalsInterface(Session session,Userinfo user) {
         this.session = session;
         initComponents();
@@ -46,6 +47,10 @@ public class VitalsInterface extends javax.swing.JPanel {
         }
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void updateInfo(Patient patient) {       //Update all sub type information
         this.patient = patient;
         updateDemographic();
@@ -704,7 +709,7 @@ public class VitalsInterface extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(null, "Vitals entered successfully", "Vitals", JOptionPane.INFORMATION_MESSAGE);
 
-        } catch (Exception e) {
+        } catch (NumberFormatException | HeadlessException e) {
             e.getMessage();
             JOptionPane.showMessageDialog(null, "Please enter data correctly", "ALERT", JOptionPane.WARNING_MESSAGE);
         }

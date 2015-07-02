@@ -21,10 +21,19 @@ import net.sf.jasperreports.swing.JRViewer;
  */
 public class ReportView extends JFrame {
 
+    /**
+     *
+     * @param fileName
+     */
     public ReportView(String fileName) {
         this(fileName, null);
     }
 
+    /**
+     *
+     * @param fileName
+     * @param para
+     */
     public ReportView(String fileName, HashMap para) {
         super("FreeMRS Report Viewer");
         Connection con = getConnection();
@@ -43,8 +52,10 @@ public class ReportView extends JFrame {
         setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }
     
-    
-
+    /**
+     *
+     * @return
+     */
     public Connection getConnection() {
         try {
             

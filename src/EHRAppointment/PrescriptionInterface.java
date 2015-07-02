@@ -1,9 +1,5 @@
-
 package EHRAppointment;
-/**
- *
- * @author Austin, Olena, Daniel
- */
+
 import EHRAppointment.Patient;
 import EHRAppointment.Userinfo;
 import java.awt.Desktop;
@@ -12,8 +8,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Calendar;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -23,6 +17,7 @@ import org.hibernate.Session;
  * @author Austin, Olena, Daniel
  */
 public class PrescriptionInterface extends javax.swing.JPanel {
+    private static final long serialVersionUID = -5720706269827069253L;
 
     /**
      * Creates new form PrescriptionInterface
@@ -31,6 +26,11 @@ public class PrescriptionInterface extends javax.swing.JPanel {
     Patient patient;
     GeneralMedicalInfo medical;     //To store medical info specially changed allergies
 
+    /**
+     *
+     * @param session
+     * @param user
+     */
     public PrescriptionInterface(Session session,Userinfo user) {
         initComponents();
         this.session = session;
@@ -45,6 +45,10 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void updateInfo(Patient patient) {   //Update each sub type of data
         this.patient = patient;
         updateMedicalInfo();

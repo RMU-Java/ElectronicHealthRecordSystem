@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package EHRAppointment;
-
+/**
+     * Used to select patient if multiple patients found
+     */
 import EHRAppointment.mainWindow;
 import EHRAppointment.Patient;
 import java.util.List;
@@ -14,16 +10,22 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Austin, Olena, Daniel
+ * @author songer
  */
 public class SelectPatientInterface extends javax.swing.JFrame {
-
-    /**
-     * Used to select patient if multiple patients found
-     */
+    private static final long serialVersionUID = 1495756230137641354L;
+/**
+ * @author Austin, Olena, Daniel
+ */
     List<Patient> result;
     private int tablePosition;
-    private mainWindow main;
+    private final mainWindow main;
+
+    /**
+     *
+     * @param result
+     * @param main
+     */
     public SelectPatientInterface(List<Patient> result, mainWindow main) {
         this.result=result;
         this.main = main;
@@ -196,6 +198,7 @@ public class SelectPatientInterface extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SelectPatientInterface(null,null).setVisible(true);
             }

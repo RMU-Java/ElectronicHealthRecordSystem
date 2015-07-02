@@ -67,10 +67,10 @@
         <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="PatientInformation">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="18" style="1"/>
+              <Font name="Arial" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Patient Information"/>
           </Properties>
@@ -80,7 +80,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="PatientID">
           <Properties>
             <Property name="text" type="java.lang.String" value="Patient ID:"/>
           </Properties>
@@ -90,7 +90,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="PatientIDData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -100,7 +100,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="Name">
           <Properties>
             <Property name="text" type="java.lang.String" value="Name:"/>
           </Properties>
@@ -110,7 +110,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="NameData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -120,7 +120,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="Birthday">
           <Properties>
             <Property name="text" type="java.lang.String" value="Birthday:"/>
           </Properties>
@@ -130,7 +130,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="BirthdayData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -140,7 +140,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="Sex">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sex:"/>
           </Properties>
@@ -150,7 +150,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="SexData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -160,7 +160,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="MaritalStatus">
           <Properties>
             <Property name="text" type="java.lang.String" value="Marital Status:"/>
           </Properties>
@@ -170,7 +170,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="MaritalStatusData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -180,7 +180,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="Job">
           <Properties>
             <Property name="text" type="java.lang.String" value="Job:"/>
           </Properties>
@@ -190,7 +190,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="JobData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -200,7 +200,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="Phone">
           <Properties>
             <Property name="text" type="java.lang.String" value="Phone:"/>
           </Properties>
@@ -210,7 +210,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
+        <Component class="javax.swing.JLabel" name="PhoneData">
           <Properties>
             <Property name="text" type="java.lang.String" value="none"/>
           </Properties>
@@ -220,7 +220,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel16">
+        <Component class="javax.swing.JLabel" name="Adress">
           <Properties>
             <Property name="text" type="java.lang.String" value="Address:"/>
           </Properties>

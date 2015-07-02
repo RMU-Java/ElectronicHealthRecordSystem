@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
 
 
@@ -17,7 +12,6 @@ import EHRAppointment.UserPasswordMatch;
 import EHRAppointment.Userinfo;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.text.ParseException;
@@ -40,7 +34,7 @@ import java.io.ObjectInputStream;
 
 /**
  *
- * @author Nuwan Prabhath
+ * @author = Austin, Olena, Daniel
  */
 public class MoreInterface extends javax.swing.JFrame {
 
@@ -54,6 +48,13 @@ public class MoreInterface extends javax.swing.JFrame {
     SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
     mainWindow main = null;                                     //To update after delete patient
     
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param user
+     * @param main
+     */
     public MoreInterface(Session session, Patient patient, Userinfo user,mainWindow main) {
         initComponents();
         this.session = session;

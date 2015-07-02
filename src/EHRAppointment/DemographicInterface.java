@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
 
 import EHRAppointment.mainWindow;
@@ -9,8 +5,6 @@ import EHRAppointment.Patient;
 import java.awt.Dimension;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import org.hibernate.Session;
@@ -20,6 +14,7 @@ import org.hibernate.Session;
  * @author Austin, Olena, Daniel
  */
 public class DemographicInterface extends javax.swing.JFrame {
+    private static final long serialVersionUID = -7189837937142270390L;
 
     /**
      * Creates new form Demographics
@@ -31,6 +26,12 @@ public class DemographicInterface extends javax.swing.JFrame {
     SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd"); //To check the format of entered date
     mainWindow main;
 
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param main
+     */
     public DemographicInterface(Session session, Patient patient,mainWindow main) {
         this.session = session;
         this.patient = patient;
@@ -43,6 +44,13 @@ public class DemographicInterface extends javax.swing.JFrame {
         jButton1.setEnabled(toggle);
     }
 
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param newPatient
+     * @param main
+     */
     public DemographicInterface(Session session, Patient patient, boolean newPatient,mainWindow main) {
         this.session = session;
         this.patient = patient;
@@ -68,25 +76,25 @@ public class DemographicInterface extends javax.swing.JFrame {
     }
 
     private void updateData() {             //Updating demographic information of the patient
-        this.jLabel3.setText(patient.getPatientId() + "");
-        this.jLabel5.setText(patient.getName());
-        this.jLabel7.setText(patient.getBirthday().toString());
-        this.jLabel9.setText(patient.getSex());
-        this.jLabel11.setText(patient.getMaritalStatus());
-        this.jLabel13.setText(patient.getJob());
-        this.jLabel15.setText(patient.getPhone());
+        this.PatientIDData.setText(patient.getPatientId() + "");
+        this.NameData.setText(patient.getName());
+        this.BirthdayData.setText(patient.getBirthday().toString());
+        this.SexData.setText(patient.getSex());
+        this.MaritalStatusData.setText(patient.getMaritalStatus());
+        this.JobData.setText(patient.getJob());
+        this.PhoneData.setText(patient.getPhone());
         this.jTextArea1.setText(patient.getAddress());
     }
 
     private void clearData() {      //Remove the data
 
-        this.jLabel3.setText("");
-        this.jLabel5.setText("");
-        this.jLabel7.setText("");
-        this.jLabel9.setText("");
-        this.jLabel11.setText("");
-        this.jLabel13.setText("");
-        this.jLabel15.setText("");
+        this.PatientIDData.setText("");
+        this.NameData.setText("");
+        this.BirthdayData.setText("");
+        this.SexData.setText("");
+        this.MaritalStatusData.setText("");
+        this.JobData.setText("");
+        this.PhoneData.setText("");
         this.jTextArea1.setText("");
     }
 
@@ -101,22 +109,22 @@ public class DemographicInterface extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        PatientInformation = new javax.swing.JLabel();
+        PatientID = new javax.swing.JLabel();
+        PatientIDData = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        NameData = new javax.swing.JLabel();
+        Birthday = new javax.swing.JLabel();
+        BirthdayData = new javax.swing.JLabel();
+        Sex = new javax.swing.JLabel();
+        SexData = new javax.swing.JLabel();
+        MaritalStatus = new javax.swing.JLabel();
+        MaritalStatusData = new javax.swing.JLabel();
+        Job = new javax.swing.JLabel();
+        JobData = new javax.swing.JLabel();
+        Phone = new javax.swing.JLabel();
+        PhoneData = new javax.swing.JLabel();
+        Adress = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -140,54 +148,54 @@ public class DemographicInterface extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setText("Patient Information");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
+        PatientInformation.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        PatientInformation.setText("Patient Information");
+        jPanel1.add(PatientInformation, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
 
-        jLabel1.setText("Patient ID:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        PatientID.setText("Patient ID:");
+        jPanel1.add(PatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        jLabel3.setText("none");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, 20));
+        PatientIDData.setText("none");
+        jPanel1.add(PatientIDData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, 20));
 
-        jLabel4.setText("Name:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        Name.setText("Name:");
+        jPanel1.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        jLabel5.setText("none");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
+        NameData.setText("none");
+        jPanel1.add(NameData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
-        jLabel6.setText("Birthday:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        Birthday.setText("Birthday:");
+        jPanel1.add(Birthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        jLabel7.setText("none");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, -1, -1));
+        BirthdayData.setText("none");
+        jPanel1.add(BirthdayData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, -1, -1));
 
-        jLabel8.setText("Sex:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        Sex.setText("Sex:");
+        jPanel1.add(Sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
-        jLabel9.setText("none");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+        SexData.setText("none");
+        jPanel1.add(SexData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
 
-        jLabel10.setText("Marital Status:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        MaritalStatus.setText("Marital Status:");
+        jPanel1.add(MaritalStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        jLabel11.setText("none");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
+        MaritalStatusData.setText("none");
+        jPanel1.add(MaritalStatusData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
 
-        jLabel12.setText("Job:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        Job.setText("Job:");
+        jPanel1.add(Job, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
-        jLabel13.setText("none");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
+        JobData.setText("none");
+        jPanel1.add(JobData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, -1, -1));
 
-        jLabel14.setText("Phone:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        Phone.setText("Phone:");
+        jPanel1.add(Phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
-        jLabel15.setText("none");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, -1));
+        PhoneData.setText("none");
+        jPanel1.add(PhoneData, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, -1));
 
-        jLabel16.setText("Address:");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
+        Adress.setText("Address:");
+        jPanel1.add(Adress, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -336,10 +344,10 @@ public class DemographicInterface extends javax.swing.JFrame {
         jTextField5.setVisible(b);
         jTextArea1.setEditable(b);
 
-        jTextField2.setText(jLabel5.getText());
-        jTextField3.setText(jLabel7.getText());
-        jTextField4.setText(jLabel13.getText());
-        jTextField5.setText(jLabel15.getText());
+        jTextField2.setText(NameData.getText());
+        jTextField3.setText(BirthdayData.getText());
+        jTextField4.setText(JobData.getText());
+        jTextField5.setText(PhoneData.getText());
     }
 
     /**
@@ -358,19 +366,16 @@ public class DemographicInterface extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DemographicInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DemographicInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DemographicInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(DemographicInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 Session s = null;
                 Patient p = null;
@@ -380,27 +385,27 @@ public class DemographicInterface extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Adress;
+    private javax.swing.JLabel Birthday;
+    private javax.swing.JLabel BirthdayData;
+    private javax.swing.JLabel Job;
+    private javax.swing.JLabel JobData;
+    private javax.swing.JLabel MaritalStatus;
+    private javax.swing.JLabel MaritalStatusData;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel NameData;
+    private javax.swing.JLabel PatientID;
+    private javax.swing.JLabel PatientIDData;
+    private javax.swing.JLabel PatientInformation;
+    private javax.swing.JLabel Phone;
+    private javax.swing.JLabel PhoneData;
+    private javax.swing.JLabel Sex;
+    private javax.swing.JLabel SexData;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

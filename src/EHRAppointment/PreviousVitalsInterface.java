@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package EHRAppointment;
 
 import java.util.List;
@@ -14,11 +8,17 @@ import javax.swing.ImageIcon;
  * @author Austin, Olena, Daniel
  */
 public class PreviousVitalsInterface extends javax.swing.JFrame {
+    private static final long serialVersionUID = 1882994013566972940L;
 
     /**
      * Creates new form PreviousVitalsInterface
      */
     List<Vitals> result;
+
+    /**
+     *
+     * @param result
+     */
     public PreviousVitalsInterface(List<Vitals> result) {
         initComponents();
         this.result=result;
@@ -290,19 +290,16 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PreviousVitalsInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PreviousVitalsInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PreviousVitalsInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PreviousVitalsInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 List<Vitals> l=null;
                 new PreviousVitalsInterface(l).setVisible(true);
