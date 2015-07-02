@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
 
 /**
- *
- * @author del_Real
+ * @author Austin, Olena, Daniel
  */
 public class GeneralMedicalInterface extends javax.swing.JFrame {
 
@@ -193,6 +187,7 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("override")
             public void run() {
                 new GeneralMedicalInterface().setVisible(true);
             }

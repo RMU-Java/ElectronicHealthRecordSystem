@@ -1,17 +1,15 @@
 package EHRAppointment;
+/**
+ * Vitals to map database 
+*/
+import java.util.Date;
 
+public class Vitals  implements java.io.Serializable {
+    private static final long serialVersionUID = 6439837777495048925L;
 /**
  *
  * @author Austin, Olena, Daniel
  */
-import java.util.Date;
-
-/**
- * Vitals to map database 
-*/
-public class Vitals  implements java.io.Serializable {
-
-
      private Integer vitalId;
      private Date dateTime;
      private float weight;

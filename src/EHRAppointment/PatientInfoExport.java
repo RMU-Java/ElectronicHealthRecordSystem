@@ -12,13 +12,15 @@ import java.util.*;
  *
  * @author Austin, Olena, Daniel
  */
-public class PatientInfoExport implements java.io.Serializable{  //use to serialize data of a patient and transfer
+public class PatientInfoExport implements java.io.Serializable{  
+    private static final long serialVersionUID = -959913511573951939L;
+//use to serialize data of a patient and transfer
     
-    private Patient patient;
-    private Insurance insuarenceInfo;
-    private GeneralMedicalInfo generalMedicalInfo;
-    private List<Prescription> pres;
-    private List<Vitals> vitals;
+    private final Patient patient;
+    private final Insurance insuarenceInfo;
+    private final GeneralMedicalInfo generalMedicalInfo;
+    private final List<Prescription> pres;
+    private final List<Vitals> vitals;
 
     public PatientInfoExport(Patient patient, Insurance insuarenceInfo, GeneralMedicalInfo generalInfo, List<Prescription> pres, List<Vitals> vitals) {
         this.patient = patient;

@@ -11,6 +11,7 @@ import java.util.Date;
  * Prescription to map into database
  */
 public class Prescription  implements java.io.Serializable {
+    private static final long serialVersionUID = 8195630669106129173L;
 
 
      private Integer prescriptionId;

@@ -1,37 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
-
+    /**
+     * Creates new form ScheduleInterface
+     */
 import EHRAppointment.Patient;
 import EHRAppointment.Schedule;
+import java.awt.HeadlessException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.jdesktop.swingx.JXDatePicker;
-import org.jdesktop.swingx.JXMonthView;
-
 /**
  *
  * @author Austin, Olena, Daniel
  */
 public class ScheduleInterface extends javax.swing.JPanel {
+    private static final long serialVersionUID = 2049515531716213762L;
 
-    /**
-     * Creates new form ScheduleInterface
-     */
     Session session;
     Patient patient;
     JXDatePicker picker;                //Calander object
@@ -295,7 +286,7 @@ public class ScheduleInterface extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Please use valid time slot", "Schedule", JOptionPane.INFORMATION_MESSAGE);
             }
 
-        } catch (Exception e) {
+        } catch (ParseException | NumberFormatException | HeadlessException e) {
             System.out.println("" + e.getMessage());
             JOptionPane.showMessageDialog(this, "Enter date in correct format", "Schedule", JOptionPane.INFORMATION_MESSAGE);
         }

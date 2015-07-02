@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package EHRAppointment;
 
 import EHRAppointment.MoreInterface;
@@ -20,18 +14,18 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
- *
  * @author Austin, Olena, Daniel
  */
 public class PasswordResetInterface extends javax.swing.JFrame {
+    private static final long serialVersionUID = -8880253435820582326L;
 
     /**
      * Creates new form PasswordResetInterface
      */
-    private Session session;
-    private String username;
+    private final Session session;
+    private final String username;
     private Userinfo user;
-    private login log;              //To desable login window
+    private final login log;              //To desable login window
     public PasswordResetInterface(login lg,Session session,String username) {
         this.username=username;
         this.session=session;
@@ -283,19 +277,16 @@ public class PasswordResetInterface extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PasswordResetInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PasswordResetInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PasswordResetInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PasswordResetInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 Session s= null;
                 login l=null;

@@ -12,6 +12,7 @@ import java.util.Date;
  * Patient to map database
  */
 public class Patient  implements java.io.Serializable {
+    private static final long serialVersionUID = 1931738403372388885L;
 
 
      private Integer patientId;

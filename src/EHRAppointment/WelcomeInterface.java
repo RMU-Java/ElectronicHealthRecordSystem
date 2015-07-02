@@ -1,22 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package EHRAppointment;
-
-/**
- *
- * @author Austin, Olena, Daniel
- */
-public class WelcomeInterface extends javax.swing.JPanel {
-
     /**
      * Welcome screen after login or no patient is searched
      */
+public class WelcomeInterface extends javax.swing.JPanel {
+/**
+ * @author Austin, Olena, Daniel
+ */
     public WelcomeInterface() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

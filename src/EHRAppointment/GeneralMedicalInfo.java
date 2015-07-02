@@ -1,15 +1,13 @@
 package EHRAppointment;
-
-/**
- *
- * @author Austin, Olena, Daniel
- */
-
 /**
  * GeneralMedicalInfo to map database
  */
 public class GeneralMedicalInfo  implements java.io.Serializable {
-
+    private static final long serialVersionUID = -9179837156953225633L;
+/**
+ *
+ * @author Austin, Olena, Daniel
+ */
 
      private int patientId;
      private String mainMedicalProblem;

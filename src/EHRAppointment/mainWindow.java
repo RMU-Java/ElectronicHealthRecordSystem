@@ -1,7 +1,3 @@
-/*
- * 
- * 
- */
 package EHRAppointment;
 
 import EHRAppointment.WelcomeInterface;
@@ -15,25 +11,22 @@ import EHRAppointment.SelectPatientInterface;
 import EHRAppointment.Userinfo;
 import EHRAppointment.VitalsInterface;
 import EHRAppointment.login;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.plaf.ColorUIResource;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
  *
- * @author Austin, Olena, Daniel
+ * @author songer
  */
 public final class mainWindow extends javax.swing.JFrame {
-
+    private static final long serialVersionUID = -4747151766204667451L;
+/**
+ * @author Austin, Olena, Daniel
+ */
     Session session;
     
     WelcomeInterface welcome;
@@ -42,11 +35,17 @@ public final class mainWindow extends javax.swing.JFrame {
     PrescriptionInterface pres;
     ScheduleInterface schedule;
 
-    private login log;
+    private final login log;
     Patient currentPatient = null;  //To store the current searched patient
-    private Userinfo user;
+    private final Userinfo user;
     private MoreInterface moreInterface;    //To create only one more interface
             
+    /**
+     *
+     * @param log
+     * @param session
+     * @param user
+     */
     public mainWindow(login log,Session session,Userinfo user) {
         this.session = session;
         this.log = log;
@@ -874,6 +873,7 @@ public final class mainWindow extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 Session s = null;
                 login l = null;

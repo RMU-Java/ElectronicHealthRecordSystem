@@ -1,18 +1,15 @@
 package EHRAppointment;
+/**
+ * Schedule to map database 
+*/
+import java.util.Date;
 
+public class Schedule  implements java.io.Serializable {
+    private static final long serialVersionUID = 6947165903813644064L;
 /**
  *
  * @author Austin, Olena, Daniel
  */
-
-import java.util.Date;
-
-/**
- * Schedule to map database 
-*/
-public class Schedule  implements java.io.Serializable {
-
-
      private Integer scheduleId;
      private int patientId;
      private Date date;
@@ -74,6 +71,7 @@ public class Schedule  implements java.io.Serializable {
         this.location = location;
     }
 
+    @Override
     public String toString(){
         return this.location;
     }

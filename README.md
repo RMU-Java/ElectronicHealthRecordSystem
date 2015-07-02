@@ -13,9 +13,7 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 ##Files
 *  _This project will use files to maintain the system and patient information._
 
-<<<<<<< HEAD
-##Arrays
-=======
+
 Using a MySQL Database for Data Input and Output
 
 ```XML
@@ -33,13 +31,7 @@ Using a MySQL Database for Data Input and Output
 </persistence>
 ```
 
-##Arrays
->>>>>>> origin/master
-
-##Loops
-
-
-##Objects and Classes
+## Objects and Classes
 
 ### Patient 
 * Patient.java (Public Class) | implements java.io.Serializable |

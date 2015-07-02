@@ -10,6 +10,7 @@ import java.util.Date;
  * Insurance to map database
  */
 public class Insurance  implements java.io.Serializable {
+    private static final long serialVersionUID = 9204116864543496414L;
 
 
      private Integer insuranceID;
@@ -18,6 +19,7 @@ public class Insurance  implements java.io.Serializable {
      private Date effectiveDate;
      private String policyNumber;
      private int patientId;
+    private Integer insuranceId;
 
     public Insurance() {
     }
@@ -30,12 +32,12 @@ public class Insurance  implements java.io.Serializable {
        this.patientId = patientId;
     }
    
-    public Integer getInsuarenceId() {
-        return this.insuarenceId;
+    public Integer getInsuranceId() {
+        return this.insuranceId;
     }
     
-    public void setInsuarenceId(Integer insuarenceId) {
-        this.insuarenceId = insuarenceId;
+    public void setInsuranceId(Integer insuranceId) {
+        this.insuranceId = insuranceId;
     }
     public String getProvider() {
         return this.provider;

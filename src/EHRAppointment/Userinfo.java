@@ -8,6 +8,7 @@ package EHRAppointment;
  * @author Austin, Olena, Daniel
  */
 public class Userinfo  implements java.io.Serializable {
+    private static final long serialVersionUID = 865678066585201102L;
 
 
      private String username;
