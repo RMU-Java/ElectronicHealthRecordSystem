@@ -38,7 +38,10 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
         Allergies = new javax.swing.JLabel();
         MainMedicalProblem = new javax.swing.JLabel();
         MedicalProblems = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        ImmunizationsData = new javax.swing.JLabel();
+        AllergiesData = new javax.swing.JLabel();
+        MainMedicalProblemData = new javax.swing.JLabel();
+        MedicalProblemsData = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -106,7 +109,13 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
 
         MedicalProblems.setText("Medical Problems:");
 
-        jLabel2.setText("jLabel2");
+        ImmunizationsData.setText("jLabel2");
+
+        AllergiesData.setText("jLabel2");
+
+        MainMedicalProblemData.setText("jLabel3");
+
+        MedicalProblemsData.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -115,13 +124,16 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MedicalProblems)
-                    .addComponent(MainMedicalProblem)
+                    .addComponent(Immunizations)
                     .addComponent(Allergies)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Immunizations)
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel2)))
+                    .addComponent(MainMedicalProblem)
+                    .addComponent(MedicalProblems))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MedicalProblemsData)
+                    .addComponent(MainMedicalProblemData)
+                    .addComponent(AllergiesData)
+                    .addComponent(ImmunizationsData))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -130,13 +142,19 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Immunizations)
-                    .addComponent(jLabel2))
+                    .addComponent(ImmunizationsData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Allergies)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Allergies)
+                    .addComponent(AllergiesData))
                 .addGap(12, 12, 12)
-                .addComponent(MainMedicalProblem, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MainMedicalProblem, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MainMedicalProblemData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MedicalProblems, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MedicalProblems, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MedicalProblemsData))
                 .addGap(0, 111, Short.MAX_VALUE))
         );
 
@@ -203,13 +221,16 @@ public class GeneralMedicalInterface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Allergies;
+    private javax.swing.JLabel AllergiesData;
     private javax.swing.JLabel Immunizations;
+    private javax.swing.JLabel ImmunizationsData;
     private javax.swing.JLabel MainMedicalProblem;
+    private javax.swing.JLabel MainMedicalProblemData;
     private javax.swing.JLabel MedicalProblems;
+    private javax.swing.JLabel MedicalProblemsData;
     private javax.swing.JLabel PatientID;
     private javax.swing.JLabel PatientIDData;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

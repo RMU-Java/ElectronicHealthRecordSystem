@@ -162,14 +162,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="MedicalProblems" min="-2" max="-2" attributes="0"/>
-                      <Component id="MainMedicalProblem" min="-2" max="-2" attributes="0"/>
-                      <Component id="Allergies" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="Immunizations" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="Immunizations" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Allergies" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="MainMedicalProblem" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="MedicalProblems" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="MedicalProblemsData" min="-2" max="-2" attributes="0"/>
+                      <Component id="MainMedicalProblemData" min="-2" max="-2" attributes="0"/>
+                      <Component id="AllergiesData" min="-2" max="-2" attributes="0"/>
+                      <Component id="ImmunizationsData" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -181,14 +184,23 @@
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Immunizations" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ImmunizationsData" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Allergies" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Allergies" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AllergiesData" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Component id="MainMedicalProblem" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="MainMedicalProblem" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="MainMedicalProblemData" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="MedicalProblems" min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="MedicalProblems" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="MedicalProblemsData" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="0" pref="111" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -215,9 +227,24 @@
             <Property name="text" type="java.lang.String" value="Medical Problems:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="ImmunizationsData">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="AllergiesData">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="MainMedicalProblemData">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="MedicalProblemsData">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel4"/>
           </Properties>
         </Component>
       </SubComponents>
