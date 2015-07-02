@@ -23,6 +23,11 @@ public class PatientInfoInterface extends javax.swing.JPanel {
     Insurance insurance;
     mainWindow main;
 
+    /**
+     *
+     * @param session
+     * @param main
+     */
     public PatientInfoInterface(Session session,mainWindow main) {
         this.session = session;
         initComponents();
@@ -30,6 +35,10 @@ public class PatientInfoInterface extends javax.swing.JPanel {
 
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void updateInfo(Patient patient) {       //This will update the all other sub types of data 
         this.patient = patient;
         updateDemographic();
@@ -53,6 +62,9 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         this.jLabel37.setText(patient.getPhone());
     }
 
+    /**
+     *
+     */
     public void updateInsuarence() {        //It is required to update in insuarence interface when values are changed
 
         session.beginTransaction();

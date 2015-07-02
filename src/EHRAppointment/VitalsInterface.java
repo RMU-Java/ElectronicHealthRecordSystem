@@ -12,6 +12,10 @@ import javax.swing.JOptionPane;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+/**
+ *
+ * @author songer
+ */
 public class VitalsInterface extends javax.swing.JPanel {
     private static final long serialVersionUID = -113516247155474667L;
 /**
@@ -25,6 +29,11 @@ public class VitalsInterface extends javax.swing.JPanel {
     boolean newPatient = false;
     private final Userinfo user;
 
+    /**
+     *
+     * @param session
+     * @param user
+     */
     public VitalsInterface(Session session,Userinfo user) {
         this.session = session;
         initComponents();
@@ -38,6 +47,10 @@ public class VitalsInterface extends javax.swing.JPanel {
         }
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void updateInfo(Patient patient) {       //Update all sub type information
         this.patient = patient;
         updateDemographic();

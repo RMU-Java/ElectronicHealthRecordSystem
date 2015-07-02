@@ -26,6 +26,12 @@ public class DemographicInterface extends javax.swing.JFrame {
     SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd"); //To check the format of entered date
     mainWindow main;
 
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param main
+     */
     public DemographicInterface(Session session, Patient patient,mainWindow main) {
         this.session = session;
         this.patient = patient;
@@ -38,6 +44,13 @@ public class DemographicInterface extends javax.swing.JFrame {
         jButton1.setEnabled(toggle);
     }
 
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param newPatient
+     * @param main
+     */
     public DemographicInterface(Session session, Patient patient, boolean newPatient,mainWindow main) {
         this.session = session;
         this.patient = patient;

@@ -29,6 +29,10 @@ public class ScheduleInterface extends javax.swing.JPanel {
     SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");   //To test the date format
     private int tablePosition = -1;     //To track the table position
 
+    /**
+     *
+     * @param session
+     */
     public ScheduleInterface(Session session) {
         initComponents();
 

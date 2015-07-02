@@ -8,6 +8,10 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 
+/**
+ *
+ * @author songer
+ */
 public class SelectPatientInterface extends javax.swing.JFrame {
     private static final long serialVersionUID = 1495756230137641354L;
 /**
@@ -16,6 +20,12 @@ public class SelectPatientInterface extends javax.swing.JFrame {
     List<Patient> result;
     private int tablePosition;
     private final mainWindow main;
+
+    /**
+     *
+     * @param result
+     * @param main
+     */
     public SelectPatientInterface(List<Patient> result, mainWindow main) {
         this.result=result;
         this.main = main;

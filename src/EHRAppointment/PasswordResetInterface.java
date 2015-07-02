@@ -26,6 +26,13 @@ public class PasswordResetInterface extends javax.swing.JFrame {
     private final String username;
     private Userinfo user;
     private final login log;              //To desable login window
+
+    /**
+     *
+     * @param lg
+     * @param session
+     * @param username
+     */
     public PasswordResetInterface(login lg,Session session,String username) {
         this.username=username;
         this.session=session;

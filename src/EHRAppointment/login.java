@@ -14,11 +14,19 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+/**
+ *
+ * @author songer
+ */
 public class login extends javax.swing.JFrame {
 /**
  * @author Austin, Olena, Daniel
  */
     Session session;
+
+    /**
+     *
+     */
     public login() {
         initComponents();
         jLabel4.setVisible(false);  //hiding forgot password message

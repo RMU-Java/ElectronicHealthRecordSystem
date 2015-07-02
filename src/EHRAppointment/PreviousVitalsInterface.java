@@ -14,6 +14,11 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
      * Creates new form PreviousVitalsInterface
      */
     List<Vitals> result;
+
+    /**
+     *
+     * @param result
+     */
     public PreviousVitalsInterface(List<Vitals> result) {
         initComponents();
         this.result=result;

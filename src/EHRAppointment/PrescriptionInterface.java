@@ -26,6 +26,11 @@ public class PrescriptionInterface extends javax.swing.JPanel {
     Patient patient;
     GeneralMedicalInfo medical;     //To store medical info specially changed allergies
 
+    /**
+     *
+     * @param session
+     * @param user
+     */
     public PrescriptionInterface(Session session,Userinfo user) {
         initComponents();
         this.session = session;
@@ -40,6 +45,10 @@ public class PrescriptionInterface extends javax.swing.JPanel {
             
     }
 
+    /**
+     *
+     * @param patient
+     */
     public void updateInfo(Patient patient) {   //Update each sub type of data
         this.patient = patient;
         updateMedicalInfo();
