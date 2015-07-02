@@ -53,7 +53,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         this.jLabel30.setText(patient.getSex());
         this.jLabel32.setText(patient.getMaritalStatus());
         this.jLabel34.setText(patient.getJob());
-        this.jLabel37.setText(patient.getPhone());
+        this.ContactsData.setText(patient.getPhone());
     }
 
     public void updateInsuarence() {        //It is required to update in insuarence interface when values are changed
@@ -68,9 +68,9 @@ public class PatientInfoInterface extends javax.swing.JPanel {
             //this.jButton2.setEnabled(false);
         } else {
             this.insurance = result.get(0);
-            this.jLabel40.setText(insurance.getProvider());
-            this.jLabel42.setText(insurance.getPlanName());
-            this.jLabel44.setText(insurance.getPolicyNumber());
+            this.PhoneData.setText(insurance.getProvider());
+            this.ProviderData.setText(insurance.getPlanName());
+            this.PlanNameData.setText(insurance.getPolicyNumber());
         }
 
     }
@@ -140,7 +140,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         MostRecentVisitVitals = new javax.swing.JLabel();
         BloodPressureSystolic = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        BloodPressureDiastolic = new javax.swing.JLabel();
         TemperatureC = new javax.swing.JLabel();
         BMI = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -156,28 +156,28 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
+        Demographics = new javax.swing.JLabel();
+        Birthday = new javax.swing.JLabel();
+        Sex = new javax.swing.JLabel();
+        MaritalStatus = new javax.swing.JLabel();
+        Job = new javax.swing.JLabel();
+        Contacts = new javax.swing.JLabel();
+        Phone = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
+        Provider = new javax.swing.JLabel();
+        PlanName = new javax.swing.JLabel();
+        PolicyNumber = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
+        ContactsData = new javax.swing.JLabel();
+        PhoneData = new javax.swing.JLabel();
+        ProviderData = new javax.swing.JLabel();
+        PlanNameData = new javax.swing.JLabel();
+        PolicyNumberData = new javax.swing.JLabel();
         BloodPressureSystolicData = new javax.swing.JLabel();
         BloodPressureDiastolicData = new javax.swing.JLabel();
         TemperatureData = new javax.swing.JLabel();
@@ -187,15 +187,15 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         PulseData = new javax.swing.JLabel();
         HeightData = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         MostRecentVisitVitals.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         MostRecentVisitVitals.setText("Most recent visit vitals: ");
 
         BloodPressureSystolic.setText("Blood pressure systolic:");
 
-        jLabel6.setText("Blood pressure diastolic:");
+        BloodPressureDiastolic.setText("Blood pressure diastolic:");
 
         TemperatureC.setText("Temperature(C):");
 
@@ -219,6 +219,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         jLabel24.setText(" Medical problems:");
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
@@ -227,25 +228,26 @@ public class PatientInfoInterface extends javax.swing.JPanel {
         jLabel25.setText("Allergies:");
 
         jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel26.setText("Demographics:");
+        Demographics.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Demographics.setText("Demographics:");
 
-        jLabel27.setText("Birthday:");
+        Birthday.setText("Birthday:");
 
-        jLabel29.setText("Sex:");
+        Sex.setText("Sex:");
 
-        jLabel31.setText("Marital status:");
+        MaritalStatus.setText("Marital status:");
 
-        jLabel33.setText("Job:");
+        Job.setText("Job:");
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel35.setText("Contacts:");
+        Contacts.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Contacts.setText("Contacts:");
 
-        jLabel36.setText("Phone:");
+        Phone.setText("Phone:");
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setText("More");
@@ -268,30 +270,31 @@ public class PatientInfoInterface extends javax.swing.JPanel {
             }
         });
 
-        jLabel39.setText("Provider:");
+        Provider.setText("Provider:");
 
-        jLabel41.setText("Plan name:");
+        PlanName.setText("Plan name:");
 
-        jLabel43.setText("Policy number:");
+        PolicyNumber.setText("Policy number:");
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel45.setText("Patient Information");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/patient icon.jpg"))); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel21.setText("jLabel21");
 
         jLabel23.setText("jLabel23");
 
-        jLabel37.setText("jLabel37");
+        ContactsData.setText("jLabel37");
 
-        jLabel40.setText("jLabel40");
+        PhoneData.setText("jLabel40");
 
-        jLabel42.setText("jLabel42");
+        ProviderData.setText("jLabel42");
 
-        jLabel44.setText("jLabel44");
+        PlanNameData.setText("jLabel44");
 
-        jLabel46.setText("jLabel46");
+        PolicyNumberData.setText("jLabel46");
 
         BloodPressureSystolicData.setText("jLabel2");
 
@@ -318,43 +321,56 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel31)
-                            .addComponent(jLabel33))
+                            .addComponent(jSeparator1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(jLabel45)
+                                .addGap(211, 211, 211)
+                                .addComponent(jLabel12)
+                                .addGap(95, 95, 95)
+                                .addComponent(jLabel22)
+                                .addContainerGap())))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Demographics)
+                            .addComponent(Birthday)
+                            .addComponent(Sex)
+                            .addComponent(MaritalStatus)
+                            .addComponent(Job))
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(103, 103, 103)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel35)
+                                .addComponent(Contacts)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel37))
+                                .addComponent(ContactsData))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel36)
+                                .addComponent(Phone)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel40)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                                .addComponent(PhoneData)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel43)
+                                .addComponent(PolicyNumber)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel46))
+                                .addComponent(PolicyNumberData))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel38)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel41)
+                                    .addComponent(PlanName)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel44))
+                                    .addComponent(PlanNameData))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel39)
+                                    .addComponent(Provider)
                                     .addGap(49, 49, 49)
-                                    .addComponent(jLabel42))))
+                                    .addComponent(ProviderData))))
                         .addGap(110, 110, 110))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,18 +383,16 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(MostRecentVisitVitals)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(BloodPressureSystolic)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(BloodPressureSystolicData))
-                                    .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel6)
+                                            .addComponent(BloodPressureDiastolic)
                                             .addComponent(TemperatureC)
                                             .addComponent(BMI)
                                             .addComponent(Weight)
-                                            .addComponent(OxygenSaturation))
+                                            .addComponent(OxygenSaturation)
+                                            .addComponent(BloodPressureSystolic))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(BloodPressureSystolicData)
                                             .addComponent(OxygenSaturationData)
                                             .addComponent(WeightData)
                                             .addComponent(BMIData)
@@ -401,33 +415,20 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(25, 25, 25))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58)
-                .addComponent(jLabel45)
-                .addGap(211, 211, 211)
-                .addComponent(jLabel12)
-                .addGap(95, 95, 95)
-                .addComponent(jLabel22)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel45)
                             .addComponent(jLabel12)
-                            .addComponent(jLabel22))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22))
+                        .addGap(30, 30, 30)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MostRecentVisitVitals)
@@ -443,7 +444,7 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                             .addComponent(BloodPressureSystolicData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(BloodPressureDiastolic)
                             .addComponent(BloodPressureDiastolicData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -476,33 +477,33 @@ public class PatientInfoInterface extends javax.swing.JPanel {
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel35)
+                            .addComponent(Demographics)
+                            .addComponent(Contacts)
                             .addComponent(jButton1)
                             .addComponent(jLabel38)
                             .addComponent(jButton2)
-                            .addComponent(jLabel37))
+                            .addComponent(ContactsData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel36)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel40)
-                            .addComponent(jLabel42))
+                            .addComponent(Birthday)
+                            .addComponent(Phone)
+                            .addComponent(Provider)
+                            .addComponent(PhoneData)
+                            .addComponent(ProviderData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel29)
-                            .addComponent(jLabel41)
-                            .addComponent(jLabel44))
+                            .addComponent(Sex)
+                            .addComponent(PlanName)
+                            .addComponent(PlanNameData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel31)
-                            .addComponent(jLabel43)
-                            .addComponent(jLabel46))
+                            .addComponent(MaritalStatus)
+                            .addComponent(PolicyNumber)
+                            .addComponent(PolicyNumberData))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel33))
+                        .addComponent(Job))
                     .addComponent(HeightData))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -519,16 +520,32 @@ public class PatientInfoInterface extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BMI;
     private javax.swing.JLabel BMIData;
+    private javax.swing.JLabel Birthday;
+    private javax.swing.JLabel BloodPressureDiastolic;
     private javax.swing.JLabel BloodPressureDiastolicData;
     private javax.swing.JLabel BloodPressureSystolic;
     private javax.swing.JLabel BloodPressureSystolicData;
+    private javax.swing.JLabel Contacts;
+    private javax.swing.JLabel ContactsData;
+    private javax.swing.JLabel Demographics;
     private javax.swing.JLabel Height;
     private javax.swing.JLabel HeightData;
+    private javax.swing.JLabel Job;
+    private javax.swing.JLabel MaritalStatus;
     private javax.swing.JLabel MostRecentVisitVitals;
     private javax.swing.JLabel OxygenSaturation;
     private javax.swing.JLabel OxygenSaturationData;
+    private javax.swing.JLabel Phone;
+    private javax.swing.JLabel PhoneData;
+    private javax.swing.JLabel PlanName;
+    private javax.swing.JLabel PlanNameData;
+    private javax.swing.JLabel PolicyNumber;
+    private javax.swing.JLabel PolicyNumberData;
+    private javax.swing.JLabel Provider;
+    private javax.swing.JLabel ProviderData;
     private javax.swing.JLabel Pulse;
     private javax.swing.JLabel PulseData;
+    private javax.swing.JLabel Sex;
     private javax.swing.JLabel TemperatureC;
     private javax.swing.JLabel TemperatureData;
     private javax.swing.JLabel Weight;
@@ -542,24 +559,8 @@ public class PatientInfoInterface extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
