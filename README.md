@@ -1,8 +1,8 @@
 # ElectronicHealthRecordSystem
 ## Team Members
-* Austin
-* Olena
-* Daniel
+* Austin @austinvernsonger
+* Olena @elenkapush
+* Daniel @delreal2
 
 ###MIS 525:  Object Oriented Programming   Final Project
 
@@ -14,6 +14,10 @@ _This is a Electronic Health Record System With Appointment Scheduler that manag
 *  _This project will use files to maintain the system and patient information._
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 Using a MySQL Database for Data Input and Output
 
 ```XML
@@ -30,8 +34,12 @@ Using a MySQL Database for Data Input and Output
   </persistence-unit>
 </persistence>
 ```
+<<<<<<< HEAD
 
 ## Objects and Classes
+=======
+##Objects and Classes
+>>>>>>> origin/master
 
 ### Patient 
 * Patient.java (Public Class) | implements java.io.Serializable |
