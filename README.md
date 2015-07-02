@@ -4,8 +4,7 @@
 * Olena @elenkapush
 * Daniel @delreal2
 
-### Javadoc
-[For The Documentation Of the Objects, Classes, and Etc (Click Here)](http://rmu-java.github.io/ElectronicHealthRecordSystem/)
+### Javadoc  [For The Documentation Of the Objects, Classes, and Etc (Click Here)](http://rmu-java.github.io/ElectronicHealthRecordSystem/)
 
 
 ###MIS 525:  Object Oriented Programming   Final Project
