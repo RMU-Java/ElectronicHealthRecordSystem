@@ -3,7 +3,10 @@ package EHRAppointment;
 import java.security.MessageDigest;
 import java.util.Arrays;
 
-
+/**
+ *
+ * @author songer
+ */
 public class UserPasswordMatch {
 /**
  * @author Austin, Olena, Daniel
@@ -19,12 +22,27 @@ public class UserPasswordMatch {
         return hash;
     }
     
-     public static boolean compareData(Userinfo user,String password) throws Exception// returns true if username and password is a match
+    /**
+     *
+     * @param user
+     * @param password
+     * @return
+     * @throws Exception
+     */
+    public static boolean compareData(Userinfo user,String password) throws Exception// returns true if username and password is a match
     {
         return user.getPasswordhash().equals(getHash(password));
     }
     
-     public static boolean changePassword(Userinfo user,String curPassword,String newPassword) throws Exception
+    /**
+     *
+     * @param user
+     * @param curPassword
+     * @param newPassword
+     * @return
+     * @throws Exception
+     */
+    public static boolean changePassword(Userinfo user,String curPassword,String newPassword) throws Exception
     {
         if(compareData(user,curPassword))
         {
@@ -35,7 +53,14 @@ public class UserPasswordMatch {
             return false;
     }
      
-     public static boolean compareQuestion(Userinfo user,String answer) throws Exception// returns true if username and password is a match
+    /**
+     *
+     * @param user
+     * @param answer
+     * @return
+     * @throws Exception
+     */
+    public static boolean compareQuestion(Userinfo user,String answer) throws Exception// returns true if username and password is a match
     {
         return user.getAnswer().equals(getHash(answer));
     }

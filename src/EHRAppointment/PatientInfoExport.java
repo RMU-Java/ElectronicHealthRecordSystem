@@ -22,6 +22,14 @@ public class PatientInfoExport implements java.io.Serializable{
     private final List<Prescription> pres;
     private final List<Vitals> vitals;
 
+    /**
+     *
+     * @param patient
+     * @param insuarenceInfo
+     * @param generalInfo
+     * @param pres
+     * @param vitals
+     */
     public PatientInfoExport(Patient patient, Insurance insuarenceInfo, GeneralMedicalInfo generalInfo, List<Prescription> pres, List<Vitals> vitals) {
         this.patient = patient;
         this.insuarenceInfo = insuarenceInfo;
@@ -30,22 +38,42 @@ public class PatientInfoExport implements java.io.Serializable{
         this.vitals = vitals;
     }
 
+    /**
+     *
+     * @return
+     */
     public Patient getPatient() {
         return patient;
     }
 
+    /**
+     *
+     * @return
+     */
     public Insurance getInsuarenceInfo() {
         return insuarenceInfo;
     }
 
+    /**
+     *
+     * @return
+     */
     public GeneralMedicalInfo getGeneralMedicalInfo() {
         return generalMedicalInfo;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Prescription> getPrescription() {
         return pres;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<Vitals> getVitals() {
         return vitals;
     }

@@ -48,6 +48,13 @@ public class MoreInterface extends javax.swing.JFrame {
     SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
     mainWindow main = null;                                     //To update after delete patient
     
+    /**
+     *
+     * @param session
+     * @param patient
+     * @param user
+     * @param main
+     */
     public MoreInterface(Session session, Patient patient, Userinfo user,mainWindow main) {
         initComponents();
         this.session = session;

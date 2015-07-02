@@ -8,7 +8,6 @@ package EHRAppointment;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.NumberFormat;
 import javax.swing.*;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -18,10 +17,8 @@ import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.time.Day;
-import org.jfree.data.time.Month;
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
-import org.jfree.data.time.Year;
 import org.jfree.data.xy.XYDataset;
 /**
  *
@@ -35,6 +32,11 @@ public class ChartPanelDraw {           //Used to draw graphs of various types o
     java.util.List<Vitals> result;          //To get data to store in data set
     String type;
 
+    /**
+     *
+     * @param result
+     * @param type
+     */
     public ChartPanelDraw(java.util.List<Vitals> result, String type) {
         this.type=type;
         this.result=result;
@@ -205,7 +207,10 @@ public class ChartPanelDraw {           //Used to draw graphs of various types o
           }
     }
 
-
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 

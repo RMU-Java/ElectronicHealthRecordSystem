@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Jul 27, 2014 6:07:16 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
   <class catalog="EHRAppointment" name="EHRAppointment.GeneralMedicalInfo" table="general_medical_info">
     <id name="patientId" type="int">
