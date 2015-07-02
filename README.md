@@ -5,9 +5,11 @@
 * Daniel @delreal2
 
 ### Javadoc
+
 > The Following Link Will show you the documentation of the objects, classes, and etc.
+
 ![] (http://rmu-java.github.io/ElectronicHealthRecordSystem/)
-![Javadoc] (http://rmu-java.github.io/ElectronicHealthRecordSystem/)
+
 
 ###MIS 525:  Object Oriented Programming   Final Project
 
