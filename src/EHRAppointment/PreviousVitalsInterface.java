@@ -45,40 +45,42 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
+        SelectDate = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        Weight = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        BPSystolic = new javax.swing.JLabel();
+        BPDiabolic = new javax.swing.JLabel();
+        Pulse = new javax.swing.JLabel();
+        Temperature = new javax.swing.JLabel();
+        TempLocation = new javax.swing.JLabel();
+        OxygenSaturation = new javax.swing.JLabel();
+        BMI = new javax.swing.JLabel();
+        WeightData = new javax.swing.JLabel();
+        HeightData = new javax.swing.JLabel();
+        BPSystolicData = new javax.swing.JLabel();
+        BPDiabolicData = new javax.swing.JLabel();
+        PulseData = new javax.swing.JLabel();
+        TemperatureData = new javax.swing.JLabel();
+        TempLocationData = new javax.swing.JLabel();
+        OxygenSaturationData = new javax.swing.JLabel();
+        BMIData = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setTitle("Patient Previous Vitals");
         setIconImage(new ImageIcon(getClass().getResource("/images/icon_transparent.png")).getImage());
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Previous Vitals");
 
-        jLabel2.setText("Select date:");
+        SelectDate.setText("Select date:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -87,49 +89,52 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Name");
+        Name.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Name.setText("Name");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Value");
 
-        jLabel5.setText("Weight");
+        Weight.setText("Weight");
 
         jLabel6.setText("Height");
 
-        jLabel7.setText("BP Systolic");
+        BPSystolic.setText("BP Systolic");
 
-        jLabel8.setText("BP Diabolic");
+        BPDiabolic.setText("BP Diabolic");
 
-        jLabel9.setText("Pulse");
+        Pulse.setText("Pulse");
 
-        jLabel10.setText("Temperature");
+        Temperature.setText("Temperature");
 
-        jLabel11.setText("Temp location");
+        TempLocation.setText("Temp location");
 
-        jLabel12.setText("Oxygen saturation");
+        OxygenSaturation.setText("Oxygen saturation");
 
-        jLabel13.setText("BMI");
+        BMI.setText("BMI");
 
-        jLabel14.setText("jLabel14");
+        WeightData.setText("jLabel14");
 
-        jLabel15.setText("jLabel15");
+        HeightData.setText("jLabel15");
 
-        jLabel16.setText("jLabel16");
+        BPSystolicData.setText("jLabel16");
 
-        jLabel17.setText("jLabel17");
+        BPDiabolicData.setText("jLabel17");
 
-        jLabel18.setText("jLabel18");
+        PulseData.setText("jLabel18");
 
-        jLabel19.setText("jLabel19");
+        TemperatureData.setText("jLabel19");
 
-        jLabel20.setText("jLabel20");
+        TempLocationData.setText("jLabel20");
 
-        jLabel21.setText("jLabel21");
+        OxygenSaturationData.setText("jLabel21");
 
-        jLabel22.setText("jLabel22");
+        BMIData.setText("jLabel22");
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vitals icon.jpg"))); // NOI18N
+        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        jTextField1.setText("jTextField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -139,36 +144,40 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2)
+                    .addComponent(SelectDate)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
+                            .addComponent(Weight)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel12))
-                        .addGap(109, 109, 109)
+                            .addComponent(BPSystolic)
+                            .addComponent(BPDiabolic)
+                            .addComponent(Pulse)
+                            .addComponent(Temperature)
+                            .addComponent(TempLocation)
+                            .addComponent(BMI)
+                            .addComponent(OxygenSaturation)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Name)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(9, 9, 9)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BMIData)
+                            .addComponent(OxygenSaturationData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TempLocationData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TemperatureData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(PulseData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BPDiabolicData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BPSystolicData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(HeightData, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(WeightData, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -186,49 +195,50 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(SelectDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(Name)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel14))
+                    .addComponent(Weight)
+                    .addComponent(WeightData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel15))
+                    .addComponent(HeightData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel16))
+                    .addComponent(BPSystolic)
+                    .addComponent(BPSystolicData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel17))
+                    .addComponent(BPDiabolic)
+                    .addComponent(BPDiabolicData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel18))
+                    .addComponent(Pulse)
+                    .addComponent(PulseData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel19))
+                    .addComponent(Temperature)
+                    .addComponent(TemperatureData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel20))
+                    .addComponent(TempLocation)
+                    .addComponent(TempLocationData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel21))
+                    .addComponent(OxygenSaturation)
+                    .addComponent(OxygenSaturationData))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel22))
+                    .addComponent(BMI)
+                    .addComponent(BMIData))
                 .addGap(19, 19, 19))
         );
 
@@ -251,15 +261,15 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
         //Selecting from combo box
         Vitals vital = (Vitals)jComboBox1.getSelectedItem();    //get selected item from combo box
         if(vital!=null){
-        jLabel14.setText(vital.getWeight()+"");                 //Showing the vital info
-        jLabel15.setText(vital.getHeight()+"");
-        jLabel16.setText(vital.getBpSystolic()+"");
-        jLabel17.setText(vital.getBpDiastolic()+"");
-        jLabel18.setText(vital.getPulse()+"");
-        jLabel19.setText(vital.getTemperature()+"");
-        jLabel20.setText(vital.getTempLocation());
-        jLabel21.setText(vital.getOxygenSaturation()+"");
-        jLabel22.setText(vital.getBmi()+"");
+        WeightData.setText(vital.getWeight()+"");                 //Showing the vital info
+        HeightData.setText(vital.getHeight()+"");
+        BPSystolicData.setText(vital.getBpSystolic()+"");
+        BPDiabolicData.setText(vital.getBpDiastolic()+"");
+        PulseData.setText(vital.getPulse()+"");
+        TemperatureData.setText(vital.getTemperature()+"");
+        TempLocationData.setText(vital.getTempLocation());
+        OxygenSaturationData.setText(vital.getOxygenSaturation()+"");
+        BMIData.setText(vital.getBmi()+"");
         }
         
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -301,31 +311,32 @@ public class PreviousVitalsInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BMI;
+    private javax.swing.JLabel BMIData;
+    private javax.swing.JLabel BPDiabolic;
+    private javax.swing.JLabel BPDiabolicData;
+    private javax.swing.JLabel BPSystolic;
+    private javax.swing.JLabel BPSystolicData;
+    private javax.swing.JLabel HeightData;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel OxygenSaturation;
+    private javax.swing.JLabel OxygenSaturationData;
+    private javax.swing.JLabel Pulse;
+    private javax.swing.JLabel PulseData;
+    private javax.swing.JLabel SelectDate;
+    private javax.swing.JLabel TempLocation;
+    private javax.swing.JLabel TempLocationData;
+    private javax.swing.JLabel Temperature;
+    private javax.swing.JLabel TemperatureData;
+    private javax.swing.JLabel Weight;
+    private javax.swing.JLabel WeightData;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
